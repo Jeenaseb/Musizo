@@ -22,7 +22,21 @@ mostplayedDb = await Hive.openBox<MostPlayed>("MostPlayedDb");
 
 late Box<RecentlyPlayed> recentplayeddb;
 openRecentPlayed() async{
+
+  // Try{
+  // 
+  // }
+  // catch(e) {
+
+  // }
+
+  try {
   recentplayeddb = await Hive.openBox<RecentlyPlayed>('Recently');
+  // code that has potential to throw an exception
+} catch (e) {
+  print("An error occurred: $e");
+}
+
 }
 
 

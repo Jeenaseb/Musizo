@@ -40,14 +40,14 @@ class _SettingsState extends State<ScreenSetting> {
                     },
                     icon: const Icon(Icons.privacy_tip_outlined)),
               ),
-              ListTile(
-                title: const Text(
-                  'Share App',
-                  style: TextStyle(fontSize: 20),
-                ),
-                trailing: IconButton(
-                    onPressed: () {}, icon: const Icon(Icons.share_rounded)),
-              ),
+              // ListTile(
+              //   title: const Text(
+              //     'Share App',
+              //     style: TextStyle(fontSize: 20),
+              //   ),
+              //   trailing: IconButton(
+              //       onPressed: () {}, icon: const Icon(Icons.share_rounded)),
+              //),
               ListTile(
                 title: const Text(
                   'About Us',
