@@ -26,6 +26,7 @@ class _SearchScreenState extends State<SearchScreen> {
     updateList('');
 
     super.initState();
+    
   }
 
   @override

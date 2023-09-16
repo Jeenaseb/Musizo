@@ -8,7 +8,11 @@ import '../model/allsongmodel.dart';
 
 late Box<MyPlaylistModel> playlistDb;
 openplaylistDb() async {
-  playlistDb = await Hive.openBox<MyPlaylistModel>("Playlist_box");
+ try {
+    playlistDb = await Hive.openBox<MyPlaylistModel>("Playlist_box");
+ } catch (e) {
+    print("An error occurred: $e");
+ }
 }
 late Box<SongDetails> allsongsDb;
 openAllsongsDb() async {
@@ -17,19 +21,15 @@ openAllsongsDb() async {
 
 late Box<MostPlayed> mostplayedDb;
 openMostPlayed() async{
-mostplayedDb = await Hive.openBox<MostPlayed>("MostPlayedDb");
+try {
+  mostplayedDb = await Hive.openBox<MostPlayed>("MostPlayedDb");
+} catch (e) {
+   print("An error occurred: $e");
+}
 }
 
 late Box<RecentlyPlayed> recentplayeddb;
 openRecentPlayed() async{
-
-  // Try{
-  // 
-  // }
-  // catch(e) {
-
-  // }
-
   try {
   recentplayeddb = await Hive.openBox<RecentlyPlayed>('Recently');
   // code that has potential to throw an exception
